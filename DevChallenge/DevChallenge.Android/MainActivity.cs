@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.OS;
 
 using Xamarin.Forms.Platform.Android;
+using Xamarin.Forms;
 
 namespace DevChallenge.Droid
 {
@@ -20,7 +21,7 @@ namespace DevChallenge.Droid
 
             Xamarin.Forms.Forms.Init(this, bundle);
 
-            SetPage(App.GetMainPage());
+            SetPage(new NavigationPage(App.GetMainPage()));
         }
     }
 }
