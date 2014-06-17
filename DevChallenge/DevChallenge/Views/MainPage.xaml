@@ -3,7 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DevChallenge.Views.MainPage">
   <StackLayout>
-    <Label Text="DevChallenge" VerticalOptions="Center" HorizontalOptions="Center" />
-  <Button Text="About" Command="{Binding Ok}"/>    
+    <Label Text="Quizz" VerticalOptions="Center" HorizontalOptions="Center" />
+    <Label Text="Mail" VerticalOptions="Center" HorizontalOptions="Center" />
+    <Entry />
+    <Label Text="Pseudo" VerticalOptions="Center" HorizontalOptions="Center" />
+    <Entry />
+    <Button Text="Jouer" Command="{Binding PlayCommand}"/>
+    <Button Text="Stats" Command="{Binding StatsCommand}"/>
+    <Button Text="About" Command="{Binding AboutCommand}"/>
   </StackLayout>
 </ContentPage>

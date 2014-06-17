@@ -31,7 +31,7 @@ namespace DevChallenge.iOS
 
             window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-            window.RootViewController = new NavigationPage(App.GetMainPage()).CreateViewController();
+            window.RootViewController = new NavigationPage(App.GetStartPage()).CreateViewController();
 
             window.MakeKeyAndVisible();
 

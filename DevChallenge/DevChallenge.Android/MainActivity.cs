@@ -21,7 +21,7 @@ namespace DevChallenge.Droid
 
             Xamarin.Forms.Forms.Init(this, bundle);
 
-            SetPage(new NavigationPage(App.GetMainPage()));
+            SetPage(new NavigationPage(App.GetStartPage()));
         }
     }
 }

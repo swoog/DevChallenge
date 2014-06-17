@@ -1,4 +1,5 @@
 ﻿using DevChallenge.Tools;
+using DevChallenge.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,13 +12,34 @@ namespace DevChallenge.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-        public ICommand Ok
+        public ICommand AboutCommand
         {
             get
             {
                 return new Command(() =>
                 {
-                    this.Navigation.PushAsync(App.GetAboutPage());
+                    this.Navigation.PushAsync(App.GetPage<AboutPage, AboutViewModel>());
+                });
+            }
+        }
+        public ICommand StatsCommand
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    this.Navigation.PushAsync(App.GetPage<AboutPage, AboutViewModel>());
+                });
+            }
+        }
+
+        public ICommand PlayCommand
+        {
+            get
+            {
+                return new Command(() =>
+                {
+                    this.Navigation.PushAsync(App.GetPage<AboutPage, AboutViewModel>());
                 });
             }
         }

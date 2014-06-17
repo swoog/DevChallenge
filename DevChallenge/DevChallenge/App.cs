@@ -1,4 +1,5 @@
-﻿using DevChallenge.ViewModels;
+﻿using DevChallenge.Tools;
+using DevChallenge.ViewModels;
 using DevChallenge.Views;
 using System;
 using System.Collections.Generic;
@@ -11,24 +12,21 @@ namespace DevChallenge
 {
     public class App
     {
-        public static Page GetMainPage()
+        public static Page GetPage<TPage, TViewModel>()
+            where TPage : Page, new()
+            where TViewModel : BaseViewModel, new()
         {
-            var view = new MainPage();
-            var vm = new MainViewModel();
+            var view = new TPage();
+            var vm = new TViewModel();
             view.BindingContext = vm;
             vm.Navigation = view.Navigation;
 
             return view;
         }
 
-        public static Page GetAboutPage()
+        public static Page GetStartPage()
         {
-            var view = new AboutPage();
-            var vm = new AboutViewModel();
-            view.BindingContext = vm;
-            vm.Navigation = view.Navigation;
-
-            return view;
+            return GetPage<MainPage, MainViewModel>();
         }
     }
 }

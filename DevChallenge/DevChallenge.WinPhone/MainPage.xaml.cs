@@ -20,7 +20,7 @@ namespace DevChallenge.WinPhone
             InitializeComponent();
 
             Forms.Init();
-            Content = DevChallenge.App.GetMainPage().ConvertPageToUIElement(this);
+            Content = DevChallenge.App.GetStartPage().ConvertPageToUIElement(this);
         }
     }
 }
